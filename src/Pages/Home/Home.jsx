@@ -1,9 +1,19 @@
 
+import { useLoaderData } from "react-router-dom";
+import Bannar from "../../Components/Bannar/Bannar";
+import Phones from "../../Components/Phones/Phones";
+
+
+
+
 const Home = () => {
+
+  const phones = useLoaderData()
+
   return (
     <div>
-      <h1>Hello world</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quod ab, provident cupiditate quibusdam sit quasi aliquam quo odit quia non consequuntur ducimus voluptates corporis, impedit illo culpa debitis eaque?</p>
+      <Bannar></Bannar>
+      <Phones phones={phones}  ></Phones>
     </div>
   );
 };
